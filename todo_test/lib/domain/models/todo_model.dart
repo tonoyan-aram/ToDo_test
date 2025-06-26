@@ -20,10 +20,3 @@ class Todo {
     );
   }
 }
-
-abstract class TodoRepository {
-  Future<List<Todo>> getTodoList();
-  Future<void> addTodo(Todo todo);
-  Future<void> updateTodo(Todo todo);
-  Future<void> deleteTodo(String id);
-}

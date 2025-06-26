@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:todo_test/domain/todo_model.dart';
+import 'package:todo_test/domain/models/todo_model.dart';
+import 'package:todo_test/domain/repositories/todo_repository_impl.dart';
 import 'package:uuid/uuid.dart';
 
 class TodoProvider extends ChangeNotifier {

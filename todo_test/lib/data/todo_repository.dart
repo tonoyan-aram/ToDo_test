@@ -1,4 +1,5 @@
-import 'package:todo_test/domain/todo_model.dart';
+import 'package:todo_test/domain/models/todo_model.dart';
+import 'package:todo_test/domain/repositories/todo_repository_impl.dart';
 
 class TodoRepo implements TodoRepository {
   final List<Todo> _storage = [];
@@ -25,10 +26,5 @@ class TodoRepo implements TodoRepository {
   @override
   Future<void> deleteTodo(String id) async {
     _storage.removeWhere((t) => t.id == id);
-  }
-
-  @override
-  Future<void> deleteCompleted() async {
-    _storage.removeWhere((t) => t.isCompleted);
   }
 }
